@@ -11,19 +11,19 @@
 <body>
     <div class="mobile-container">
         <header>
-            <input type="text">
+            <input type="text" id="search-term">
             <button id="search"><i class="fa-solid fa-magnifying-glass"></i></button>
         </header>
         
         <div class="fav-container">
             <h3>Favorite Meals</h3>
-            <ul class="fav-meals">
+            <ul class="fav-meals" id="fav-meals">
                 <li><img src="https://www.themealdb.com/images/ingredients/Lime.png" alt=""><span>Lime</span></li>
-                <li><img src="https://www.themealdb.com/images/media/meals/llcbn01574260722.jpg" alt=""><span>
+                <!-- <li><img src="https://www.themealdb.com/images/media/meals/llcbn01574260722.jpg" alt=""><span>
                     Carbonara</span></li>
                 <li><img src="https://www.themealdb.com/images/media/meals/wtsvxx1511296896.jpg" alt=""><span>
                     Lasagne</span></li>
-                <li><img src="https://www.themealdb.com/images/media/meals/1ngcbf1628770793.jpg" alt=""><span>Mushroom</span></li>    
+                <li><img src="https://www.themealdb.com/images/media/meals/1ngcbf1628770793.jpg" alt=""><span>Mushroom</span></li>     -->
                       
 
             </ul>
@@ -45,7 +45,30 @@
             </div> -->
         </div>
     </div>
-
+    <div class="popup-container hidden " id="meal-popup">
+        <div  class="popup">
+            <button id="close-popup" class="close-popup">
+                <i class="fa-sharp fa-solid fa-xmark"></i>
+            </button>
+            <div class="meal-info" id="meal-info">
+                <!-- <h1>Meal Title</h1>
+                <img src= 
+                "https://www.themealdb.com/images/media/meals/wruvqv1511880994.jpg" alt="">
+           
+            
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim necessitatibus, deserunt quasi itaque voluptatum debitis aperiam laborum rem quos distinctio.</p>
+                <ul>
+                    <li>ingredient 1 / Measure</li>
+                    <li>ingredient 2 / Measure</li>
+                    <li>ingredient 3 / Measure</li>
+                    
+                </ul> -->
+            </div>
+               
+            
+        </div>
+    </div>
+    
     <script src="app.js"></script>
 </body>
 </html>  

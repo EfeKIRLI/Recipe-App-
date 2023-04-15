@@ -75,6 +75,23 @@ background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 .fav-meals li {
     /* background-color: #fff; */
     width: 85px;
+    margin: 5px;
+    position: relative;
+    cursor:pointer;
+}
+.fav-meals li .clear {
+    cursor: pointer;
+    background-color: transparent;
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    border: none;
+    font-size: 1.4rem;
+    opacity: 0;
+}
+.fav-meals li:hover .clear{
+    cursor: pointer;
+    opacity: 1;
 }
 
 .fav-meals li img{
@@ -87,7 +104,17 @@ background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 
 .fav-meals li span {
+    display: inline-block;
     font-size:0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75px;
+    
+}
+.fav-meals li span:hover{
+    white-space: normal;
+    overflow: auto;
 }
 
 /* .fav-meals li {
@@ -104,6 +131,8 @@ h3 {
     margin: 1.5rem;
     box-shadow: 0 0 10px 2px #3333331a;
     border-radius: 5px ;
+    margin: 1.5rem;
+    cursor: pointer;
 }
 
 .meal-header {
@@ -135,6 +164,7 @@ h3 {
 .meal-body h4 {
     margin: 0;
 }
+
 .meal-body .fav-btn{ 
     background-color: transparent;
     border: none;
@@ -144,4 +174,53 @@ h3 {
 }
 .meal-body .fav-btn.active{ 
     color: rebeccapurple;
+}
+.popup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed  ;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+}
+
+.popup-container.hidden{
+    opacity: 0;
+    pointer-events:none;
+   
+} 
+
+.popup{
+    background-color: #fff;
+    max-width: 800px;
+    width: 100%;
+    padding: 0 2rem;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+    overflow: auto;
+    max-height: 100vh;
+    /* margin:  2rem; */
+    
+
+}
+.popup h1 {
+    text-align: center;
+}
+.popup img{
+    max-width: 100%;
+}
+
+.popup .close-popup{
+       position: absolute;
+       top: 1rem;
+       right: 1rem;
+       background-color: transparent;
+       border: none;
+       font-size: 1.5rem;
+       cursor: pointer;
 }
